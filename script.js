@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function add(){
-    const input = document.querySelector('input');
+    const input = document.querySelector('.create-task_input');
     if (input.value) {
 
         let value = todoList.add(input.value);

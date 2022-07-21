@@ -110,7 +110,7 @@ input {
 } */
 
 body {
-    background-color: #F2F7F8
+    background-color: #F2F7F8;
     ;
 }
 
@@ -140,21 +140,20 @@ body {
 .todo-descr {
     display: block;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 15px;
+    line-height: 17px;
     text-align: center;
     color: #7F7F7F;
 }
 
 .todo-logo {
     display: block;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 50px auto;
 } 
 
 .menu-item-logo {
     display: block;
-    margin: 0 auto 12px auto;
-    width: 40px;
-    height: 40px;
+    margin: 0 auto 18px auto;
 }
 
 .menu-item {
@@ -167,18 +166,20 @@ body {
 }
 
 .todo-main {
-    margin: 60px 0;
-    width: 1030px;
-    margin-left: 275px;
+    margin: 100px 80px 0 330px;
+    width: 100%;
     background-color: white;
     padding: 30px;
+    border: 1px solid #F0F0F0;
+    border-radius: 20px;
 }
 
 .title {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 25px;
+    line-height: 29px;
     color: #001529;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 hr {
@@ -190,32 +191,37 @@ hr {
     font-weight: 400;
     font-size: 17px;
     color: #7F7F7F;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
-input {
-    width: 75%;
-    height: 40px;
+.create-task_input {
+    width: 80%;
+    height: 60px;
     background: #FFFFFF;
     border: 1px solid #C4C4C4;
     box-shadow: 0px 1px 4px rgba(219, 219, 219, 0.3);
     border-radius: 10px;
-    padding: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #001529;
+    padding: 20px;
 }
 
 .addBtn {
-    margin-top: 15px;
-    width: 220px;
-    height: 40px;
+    width: 277px;
+    height: 58px;
     background: #029AAD;
     border: 1px solid #029AAD;
     border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    cursor: pointer;
+    transition: .5s all;
 }
 
 .addBtn:hover {
@@ -223,10 +229,14 @@ input {
     color: #029AAD;
 }
 
+.menu_log-out {
+    position: absolute;
+    bottom: 50px
+}
+
 .main-item {
     display: grid;
-    grid-template-columns: 45% 25% 25%;
-    margin-top: 20px;
+    grid-template-columns: 44% 23% 25%;
     width: 100%;
     height: 50px;
     background: #DDEEF2;
@@ -241,13 +251,19 @@ input {
     color: #029AAD;
 }
 
+.main-list {
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
 .task-item {
+    height: 67px;
     list-style: none;
     width: 100%;
     display: grid;
     grid-template-columns: 40% 24% 24% 3% 3% 3%;
     column-gap: 5px;    
-    border: 0.5px solid #C4C4C4;
     padding: 10px;
     justify-content: center;
     align-items: center;
@@ -258,11 +274,19 @@ input {
     color: #001529;
 }
 
+.task-item:nth-child(2n+1) {
+    background: #F0F0F0;
+}
+
 .button {
     background: #029AAD;
     border-radius: 10px;
     border: 1px solid #029AAD;
     color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .5s all;
 }
 .button:hover {
     background: #fff;
@@ -276,4 +300,59 @@ input {
 
 a {
     text-decoration: none;
+}
+
+.header {
+    position: absolute;
+    height: 40px;
+    padding: 0 80px 0 330px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.header_arrow {
+    margin-right: 30px;
+}
+
+.header_icons {
+    margin-right: 25px;
+}
+
+.header_search {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #7F7F7F;
+    background-color: #F2F7F8;
+    border: none;
+    width: 66%;
+}
+
+.header_settings {
+    margin: 0 30px;
+}
+
+.header_ava {
+    margin-right: 10px;
+}
+
+.header_title {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #001529;
+    margin-bottom: 5px;
+}
+
+.header_subtitle {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #7F7F7F;
+}
+
+.header_logout {
+    margin-left: 15px;
 }

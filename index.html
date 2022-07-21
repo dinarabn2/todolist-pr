@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="header">
+        <a href="#" class="header_arrow"><img src="icons/Arrow.svg" alt="Arrow"></a>
+        <a href="#" class="header_icons"><img src="icons/header-icon.svg" alt="icon"></a>
+        <input type="text" class="header_search"  placeholder="Search">
+        <a href="#" class="header_notification"><img src="icons/Notifications.svg" alt="Notifications"></a>
+        <a href="#" class="header_settings"><img src="icons/Settings.svg" alt="Settings"></a>
+        <a href="#" class="header_ava"><img src="icons/Ava.svg" alt="ava"></a>
+        <div class="header_descr">
+            <div class="header_title">Толганай Акылбекова</div>
+            <div class="header_subtitle">Заведующая складом</div>
+        </div>
+        <a href="#" class="header_logout"><img src="icons/out.svg" alt="log out"></a>
+    </div>
     <div class="todo">
         <div class="todo-menu">
             <img class="todo-logo" src="icons/Logo.svg" alt="main-logo">
@@ -45,6 +58,7 @@
                     </a>
                 </li>
             </ul>
+            <a class="menu_log-out" href="#"><img src="icons/Log out.svg" alt="log out"></a>
         </div>
         <div class="todo-main">
             <div class="wrapper">
@@ -52,7 +66,7 @@
                 <hr>
                 <div class="subtitle">ADD NEW TASKS:</div>
                 <div class="create_task">
-                    <input type="text" placeholder="Task">
+                    <input type="text" placeholder="Task" class="create-task_input">
                     <button class="addBtn" onclick="add()">Add</button>
                 </div>
             </div>
@@ -65,8 +79,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
-      
+        </div>     
     </div>
     <script src="todo.js"></script>
     <script src="dom_js.js"></script>

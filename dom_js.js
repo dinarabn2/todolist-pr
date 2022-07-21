@@ -31,7 +31,7 @@ class DOM {
     uncompleteBtn(task) {
         const btn = document.createElement('button');
         btn.classList.add('button');
-        btn.innerHTML = '&#8249';
+        btn.innerHTML = '<';
         btn.onclick = uncomplete(task);
         return btn;
     }
@@ -39,7 +39,7 @@ class DOM {
     removeBtn(task) {
         const btn = document.createElement('button');
         btn.classList.add('button');
-        btn.innerHTML = '&times';
+        btn.innerHTML = 'x';
         btn.onclick = remove(task);
         return btn;
     }
