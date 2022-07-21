@@ -59,7 +59,7 @@ class DOM {
     }
 
     addItem(tasks) {
-        const list = document.querySelector('ul');
+        const list = document.querySelector('.main-list');
         const lastAddedTask = tasks[tasks.length-1];
         const elem = this.createItem(lastAddedTask);
         return list.appendChild(elem);

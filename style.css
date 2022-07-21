@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -107,4 +107,173 @@ input {
     outline: none;
     cursor: pointer;
     margin-left: 20px;
+} */
+
+body {
+    background-color: #F2F7F8
+    ;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+.todo {
+    height: 100%;
+    display: flex;
+}
+
+.todo-menu {
+    position: fixed;
+    padding: 40px;
+    height: 100vh;
+    background-color: white;
+}
+
+.list {
+    list-style: none;
+}
+
+.todo-descr {
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    text-align: center;
+    color: #7F7F7F;
+}
+
+.todo-logo {
+    display: block;
+    margin: 0 auto 40px auto;
+} 
+
+.menu-item-logo {
+    display: block;
+    margin: 0 auto 12px auto;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-item {
+    margin-bottom: 30px;
+}
+
+.todo-descr:hover {
+    cursor: pointer;
+    color: #029AAD;
+}
+
+.todo-main {
+    margin: 60px 0;
+    width: 1030px;
+    margin-left: 275px;
+    background-color: white;
+    padding: 30px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 20px;
+    color: #001529;
+    margin-bottom: 25px;
+}
+
+hr {
+    height: 0px;
+    border: 1px solid #DDEEF2;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 17px;
+    color: #7F7F7F;
+    margin-top: 25px;
+}
+
+input {
+    width: 75%;
+    height: 40px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 1px 4px rgba(219, 219, 219, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.addBtn {
+    margin-top: 15px;
+    width: 220px;
+    height: 40px;
+    background: #029AAD;
+    border: 1px solid #029AAD;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.addBtn:hover {
+    background: #fff;
+    color: #029AAD;
+}
+
+.main-item {
+    display: grid;
+    grid-template-columns: 45% 25% 25%;
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background: #DDEEF2;
+    list-style: none;
+    padding: 16px;
+}
+
+.main-item>span {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #029AAD;
+}
+
+.task-item {
+    list-style: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 24% 24% 3% 3% 3%;
+    column-gap: 5px;    
+    border: 0.5px solid #C4C4C4;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #001529;
+}
+
+.button {
+    background: #029AAD;
+    border-radius: 10px;
+    border: 1px solid #029AAD;
+    color: white;
+}
+.button:hover {
+    background: #fff;
+    color: #029AAD;
+}
+
+.create_task {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
 }

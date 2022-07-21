@@ -43,30 +43,30 @@ function remove(task){
 //localStorage
 
 function putElemInArray () {
-    const tasks = []
+    const tasks = [];
     for(let i in {...localStorage}){
-        tasks.push(JSON.parse({...localStorage}[i]))
+        tasks.push(JSON.parse({...localStorage}[i]));
     }
-    return tasks
+    return tasks;
 }
 
 function getTodoInLS() {
-    const tasks = putElemInArray()
-    for(let i in tasks){
-        todoList.add(tasks[i].description)
-        let lastElem = todoList.tasks[todoList.tasks.length-1]
-        lastElem.id = tasks[i].id
-        lastElem.createdAt = tasks[i].createdAt
-        lastElem.completedAt = tasks[i].completedAt
-        lastElem.completionHistory = tasks[i].completionHistory
-        dom.addItem(todoList.tasks)
+    const tasks = putElemInArray();
+    for(let i in tasks){ 
+        todoList.add(tasks[i].description);
+        let elem = todoList.tasks[todoList.tasks.length-1];
+        elem.id = tasks[i].id;
+        elem.createdAt = tasks[i].createdAt;
+        elem.completedAt = tasks[i].completedAt;
+        elem.completionHistory = tasks[i].completionHistory;
+        dom.addItem(todoList.tasks);
     }
 }
 
 function addToLS(tasks) {
-    let lastElem = tasks[tasks.length - 1];
-    localStorage.setItem(lastElem.id, JSON.stringify(lastElem));
-    return localStorage.getItem(lastElem.id);
+    let elem = tasks[tasks.length - 1];
+    localStorage.setItem(elem.id, JSON.stringify(elem));
+    return localStorage.getItem(elem.id);
 }
 
 function completeToLS(id) {
@@ -89,3 +89,13 @@ function removeToLS(id) {
     localStorage.removeItem(taskInLS.id);
     return taskInLS;
 }
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: "POST",
+    body: JSON.stringify({name: 'Alex'}),
+    headers: {
+        'Content-type' : 'application/json'
+    }
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
