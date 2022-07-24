@@ -19,7 +19,7 @@ form.addEventListener('submit', (e) => {
         return await res.json();
     };
 
-    postData('https://jsonplaceholder.typicode.com/posts', json)
+    postData('internstemp.evrika.com/api​/users​/sign-in​/', json)
         .then(res => console.log(res));
 
     e.target.reset();

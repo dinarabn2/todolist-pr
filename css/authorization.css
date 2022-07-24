@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.authorization {
+    height: 100vh;
+    background: #001529;
+    box-shadow: 0px 4px 250px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authorization_main {
+    width: 500px;
+    height: 531px;
+}
+
+.authorization_logo {
+    margin: 0 auto;
+    display: block;
+}
+
+.authorization_descr {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+input[name="login"], input[name="password"] {
+    width: 500px;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 25px 20px 20px 50px;
+    margin-bottom: 40px;
+}
+
+input[name="login"]:hover, input[name="password"]:hover {
+    box-shadow: 0 0 3px 3px #fff;
+    transition: .3s all;
+}
+
+.icon-user::before {
+    content: "\e971";
+    position: absolute;
+    color: #029AAD;
+    font-size: 25px;
+    padding: 20px 0 0 15px;
+}
+
+.icon-user:hover::before {
+    color: #001529;
+    transition: all .5s;
+}
+
+.icon-lock::before {
+    content: "\e98f";
+    position: absolute;
+    color: #029AAD;
+    font-size: 25px;
+    padding: 20px 0 0 15px;
+}
+
+.icon-lock:hover::before {
+    color: #001529;
+    transition: all .5s;
+}
+
+.form {
+    margin-top: 70px;
+}
+
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.authorization_text {
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.authorization_btn {
+    width: 125px;
+    height: 56px;
+    background: #029AAD;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    cursor: pointer;
+    transition: .5s all;
+    border: none;
+}
+
+.authorization_btn:hover {
+    background: #fff;
+    color: #029AAD;
+}

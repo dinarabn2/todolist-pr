@@ -1,114 +1,3 @@
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-.todo {
-    display: grid;
-    grid-template-columns: 40% 60%;
-}
-
-.title {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
-}
-
-.title::after {
-    content: '';
-    display: block;
-    width: 33%;
-    height: 2px;
-    background-color: #000;
-}
-
-ul {
-    list-style-type: none;
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-span {
-    width: 200px;
-    display: inline-block;
-    position: relative;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 18px;
-    color: #000000;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-li {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-li::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    display: block;
-    width: calc(100% - 40px);
-    height: 2px;
-    background-color: #FFD500;
-}
-
-input {
-    margin-top: 35px;
-    width: 270px;
-    height: 45px;
-    line-height: 50px;
-    font-size: 16px;
-    background: rgba(196,196,196,0.29);
-    border: 1px solid rgba(0,0,0,0.19);
-    padding: 0 15px;
-    outline: none;
-    border-radius: 4px;
-}
-
-.addBtn {
-    display: block;
-    margin-top: 15px;
-    width: 170px;
-    height: 45px;
-    background: #FFD500;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 14px;
-    color: #FFFFFF;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.wrapper {
-    padding: 30px 0 0 60px;
-}
-
-.button {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: #FFD500;
-    font-weight: bold;
-    font-size: 15px;
-    line-height: 14px;
-    color: #FFFFFF;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    margin-left: 20px;
-} */
-
 body {
     background-color: #F2F7F8;
     ;
@@ -133,7 +22,7 @@ body {
     background-color: white;
 }
 
-.list {
+.todo-list {
     list-style: none;
 }
 
@@ -151,12 +40,12 @@ body {
     margin: 0 auto 50px auto;
 } 
 
-.menu-item-logo {
+.todo-item-logo {
     display: block;
     margin: 0 auto 18px auto;
 }
 
-.menu-item {
+.todo-item {
     margin-bottom: 30px;
 }
 
@@ -229,7 +118,7 @@ hr {
     color: #029AAD;
 }
 
-.menu_log-out {
+.todo-link {
     position: absolute;
     bottom: 50px
 }
@@ -355,117 +244,4 @@ a {
 
 .header_logout {
     margin-left: 15px;
-}
-
-.authorization {
-    height: 100vh;
-    background: #001529;
-    box-shadow: 0px 4px 250px rgba(0, 0, 0, 0.25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.authorization_main {
-    width: 500px;
-    height: 531px;
-}
-
-.authorization_logo {
-    margin: 0 auto;
-    display: block;
-}
-
-.authorization_descr {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-    color: #FFFFFF;
-    margin-top: 50px;
-}
-
-input[name="login"], input[name="password"] {
-    width: 500px;
-    height: 60px;
-    background: #FFFFFF;
-    border: 1px solid #F0F0F0;
-    border-radius: 5px;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    padding: 25px 20px 20px 50px;
-    margin-bottom: 40px;
-}
-
-input[name="login"]:hover, input[name="password"]:hover {
-    box-shadow: 0 0 3px 3px #fff;
-    transition: .3s all;
-}
-
-.icon-user::before {
-    content: "\e971";
-    position: absolute;
-    color: #029AAD;
-    font-size: 25px;
-    padding: 20px 0 0 15px;
-}
-
-.icon-user:hover::before {
-    color: #001529;
-    transition: all .5s;
-}
-
-.icon-lock::before {
-    content: "\e98f";
-    position: absolute;
-    color: #029AAD;
-    font-size: 25px;
-    padding: 20px 0 0 15px;
-}
-
-.icon-lock:hover::before {
-    color: #001529;
-    transition: all .5s;
-}
-
-.form {
-    margin-top: 70px;
-}
-
-input[type="checkbox"] {
-    width: 17px;
-    height: 17px;
-    cursor: pointer;
-}
-
-.authorization_text {
-    margin-left: 8px;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
-
-.authorization_btn {
-    width: 125px;
-    height: 56px;
-    background: #029AAD;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #FFFFFF;
-    display: block;
-    margin: 0 auto;
-    margin-top: 70px;
-    cursor: pointer;
-    transition: .5s all;
-    border: none;
-}
-
-.authorization_btn:hover {
-    background: #fff;
-    color: #029AAD;
 }
