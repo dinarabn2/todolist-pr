@@ -89,3 +89,18 @@ function removeToLS(id) {
     localStorage.removeItem(taskInLS.id);
     return taskInLS;
 }
+
+if (localStorage.getItem('access', 'refresh')) {
+    localStorage.removeItem('access');
+    localStorage.removeItem('refresh');
+}
+
+const logout = document.querySelectorAll('.logout');
+
+logout.forEach(item => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        window.location.href = 'authorization.html';
+    })
+})

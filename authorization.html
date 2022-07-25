@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST</title>
+    <title>Evrika</title>
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/icon.css">
@@ -15,7 +15,7 @@
     <div class="authorization_main">
       <img src="icons/main-logo.svg" alt="main-logo" class="authorization_logo">
       <div class="authorization_descr">Добро пожаловать в Сервис Доставки Товаров</div>
-      <form class="form">
+      <div class="form">
         <div class="icon-user">
           <input type="text" name="login" placeholder="Логин" required>
         </div>
@@ -24,8 +24,8 @@
         </div>
         <input type="checkbox" name="check">
         <label class="authorization_text">Запомнить</label>
-        <button class="authorization_btn">Вход</button>
-      </form>
+        <button class="authorization_btn" onclick="signIn()">Вход</button>
+      </div>
     </div>
   </section>
 
