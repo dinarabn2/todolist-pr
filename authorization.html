@@ -17,13 +17,16 @@
       <div class="authorization_descr">Добро пожаловать в Сервис Доставки Товаров</div>
       <div class="form">
         <div class="icon-user">
-          <input type="text" name="login" placeholder="Логин" required>
+          <input id = "user" type="text" name="login" placeholder="Логин" required>
         </div>
         <div class="icon-lock">
-          <input type="password" name="password" placeholder="Пароль" required>
+          <img src="icons/Eye.svg" alt="eye" class="icon-eye">
+          <input id = "pswd" type="password" name="password" placeholder="Пароль" required>
         </div>
-        <input type="checkbox" name="check">
-        <label class="authorization_text">Запомнить</label>
+        <label class="authorization_text">
+          <input id ="remember" type="checkbox" name="check">
+          <span>Запомнить</span>
+        </label>
         <button class="authorization_btn" onclick="signIn()">Вход</button>
       </div>
     </div>

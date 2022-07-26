@@ -104,3 +104,7 @@ logout.forEach(item => {
         window.location.href = 'authorization.html';
     })
 })
+
+if(getCookie('user') && getCookie('pswd')) {
+    
+}

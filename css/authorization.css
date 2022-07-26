@@ -42,7 +42,7 @@ input[name="login"], input[name="password"] {
     font-weight: 400;
     font-size: 17px;
     line-height: 20px;
-    padding: 25px 20px 20px 50px;
+    padding: 25px 20px 20px 52px;
     margin-bottom: 40px;
 }
 
@@ -55,8 +55,8 @@ input[name="login"]:hover, input[name="password"]:hover {
     content: "\e971";
     position: absolute;
     color: #029AAD;
-    font-size: 25px;
-    padding: 20px 0 0 15px;
+    font-size: 23px;
+    padding: 20px;
 }
 
 .icon-user:hover::before {
@@ -64,17 +64,28 @@ input[name="login"]:hover, input[name="password"]:hover {
     transition: all .5s;
 }
 
+.icon-lock {
+    position: relative;
+}
+
 .icon-lock::before {
     content: "\e98f";
     position: absolute;
     color: #029AAD;
-    font-size: 25px;
-    padding: 20px 0 0 15px;
+    font-size: 23px;
+    padding: 20px;
 }
 
 .icon-lock:hover::before {
     color: #001529;
     transition: all .5s;
+}
+
+.icon-eye {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
 }
 
 .form {
@@ -88,11 +99,15 @@ input[type="checkbox"] {
 }
 
 .authorization_text {
-    margin-left: 8px;
     font-weight: 400;
     font-size: 17px;
     line-height: 20px;
     color: #FFFFFF;
+    cursor: pointer;
+}
+
+.authorization_text>span {
+    padding-left: 8px;
 }
 
 .authorization_btn {

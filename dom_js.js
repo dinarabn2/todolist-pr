@@ -74,18 +74,18 @@ class DOM {
 
     complete(task){
         const elem = this.getElementById(task.id);
-        const span = document.querySelector('.completed');
-        span.innerHTML = todoList.formatDate(task.completedAt);
+        const complete = elem.children[2];
+        console.log(complete);
+        complete.textContent = todoList.formatDate(task.completedAt);
         return elem;
     }
 
     uncomplete(task){
-        if (this.complete(task)) {
-            const elem = this.getElementById(task.id);
-            const span = document.querySelector('.completed');
-            span.innerHTML = '-';
-            return elem;
-        }
+        const elem = this.getElementById(task.id);
+        console.log(elem)
+        const complete = elem.children[2];
+        complete.textContent = '-';
+        return elem;
     } 
 
     remove(task){
