@@ -84,7 +84,7 @@ hr {
 }
 
 .create-task_input {
-    width: 80%;
+    width: 42%;
     height: 60px;
     background: #FFFFFF;
     border: 1px solid #C4C4C4;
@@ -98,8 +98,15 @@ hr {
     padding: 20px;
 }
 
+.create-task_check {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
 .addBtn {
-    width: 277px;
+    width: 200px;
     height: 58px;
     background: #029AAD;
     border: 1px solid #029AAD;
@@ -120,12 +127,21 @@ hr {
 
 .todo-link {
     position: absolute;
-    bottom: 50px
+    bottom: 50px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #029AAD;
+    cursor: pointer;
+}
+
+.todo-link:hover {
+    color:#001529;
 }
 
 .main-item {
     display: grid;
-    grid-template-columns: 44% 23% 25%;
+    grid-template-columns: 25% 40% 15% 10% 10%;
     width: 100%;
     height: 50px;
     background: #DDEEF2;
@@ -151,12 +167,10 @@ hr {
     list-style: none;
     width: 100%;
     display: grid;
-    grid-template-columns: 40% 24% 24% 3% 3% 3%;
-    column-gap: 5px;    
-    padding: 10px;
+    grid-template-columns: 24% 39% 15% 9% 9%;
+    column-gap: 5px;  
     justify-content: center;
     align-items: center;
-
     font-weight: 400;
     font-size: 17px;
     line-height: 20px;
@@ -176,6 +190,9 @@ hr {
     font-weight: 700;
     cursor: pointer;
     transition: .5s all;
+    height: 33px;
+    width: 33px;
+    margin-left: 13px;
 }
 .button:hover {
     background: #fff;
@@ -217,6 +234,9 @@ a {
     background-color: #F2F7F8;
     border: none;
     width: 66%;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color .4s;
 }
 
 .header_settings {
@@ -244,4 +264,8 @@ a {
 
 .header_logout {
     margin-left: 15px;
+}
+
+.header_notification {
+    margin-left: 5px;
 }

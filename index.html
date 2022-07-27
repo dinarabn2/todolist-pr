@@ -58,7 +58,7 @@
                     </a>
                 </li>
             </ul>
-            <a class="todo-link logout" href="#"><img src="icons/Log out.svg" alt="log out"></a>
+            <a class="todo-link logout" href="#">Выход<img src="icons/log out1.svg" alt="log out"></a>
         </div>
         <div class="todo-main">
             <div class="wrapper">
@@ -66,23 +66,27 @@
                 <hr>
                 <div class="subtitle">ADD NEW TASKS:</div>
                 <div class="create_task">
-                    <input type="text" placeholder="Task" class="create-task_input">
-                    <button class="addBtn" onclick="add()">Add</button>
+                    <input name="title" type="text" placeholder="Title" class="create-task_input">
+                    <input name="descr" type="text" placeholder="Description" class="create-task_input">
+                    <input name="check" type="checkbox" class="create-task_check">
+                    <button class="addBtn" onclick="addTask()">Add</button>
                 </div>
             </div>
             <div class="wrapper">
                 <ul class="main-list">
                     <li class="main-item">
-                        <span>Tasks</span>
-                        <span>Create at</span>
-                        <span>Complete at</span>
+                        <span>Title</span>
+                        <span>Description</span>
+                        <span>Status</span>
+                        <span>Complete</span>
+                        <span>Delete</span>
                     </li>
                 </ul>
             </div>
         </div>     
     </div>
-    <script src="todo.js"></script>
-    <script src="dom_js.js"></script>
-    <script src="script.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/dom_js.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

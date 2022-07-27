@@ -31,8 +31,6 @@ function signIn() {
             if (obj.data) {
                 localStorage.setItem('access', obj.data.access);
                 localStorage.setItem('refresh', obj.data.refresh);
-            } else {
-                console.log(obj);
             }
         })
         .then(() => {

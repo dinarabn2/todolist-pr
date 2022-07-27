@@ -1,38 +1,30 @@
 class DOM {
+    titleSpan(task) {
+        const span = document.createElement('span');
+        span.classList.add('descr');
+        span.innerText = task.attributes.title;
+        return span;
+    }
+
     descrSpan(task) {
         const span = document.createElement('span');
         span.classList.add('descr');
-        span.innerText = task.description;
+        span.innerText = task.attributes.descriptions;
         return span;
     }
 
-    createdSpan(task) {
+    statusSpan(task) {
         const span = document.createElement('span');
-        span.classList.add('created');
-        span.innerText = todoList.formatDate(task.createdAt);
+        span.classList.add('status');
+        span.innerText = task.attributes.status === true ? 'Complete' : 'Uncomplete';
         return span;
     }
 
-    completedSpan(task) {
-        const span = document.createElement('span');
-        span.classList.add('completed');
-        span.innerText = todoList.formatDate(task.completedAt);
-        return span;
-    }
-
-    completeBtn(task) {
+    toggleBtn(task) {
         const btn = document.createElement('button');
         btn.classList.add('button');
         btn.innerHTML = '&#10003';
-        btn.onclick = complete(task);
-        return btn;
-    }
-
-    uncompleteBtn(task) {
-        const btn = document.createElement('button');
-        btn.classList.add('button');
-        btn.innerHTML = '<';
-        btn.onclick = uncomplete(task);
+        btn.onclick = toggle(task);
         return btn;
     }
 
@@ -48,11 +40,10 @@ class DOM {
         const item = document.createElement('li');
         item.classList.add('task-item');
         item.innerText = '';
+        item.append(this.titleSpan(task));
         item.append(this.descrSpan(task));
-        item.append(this.createdSpan(task));
-        item.append(this.completedSpan(task));
-        item.append(this.completeBtn(task));
-        item.append(this.uncompleteBtn(task));
+        item.append(this.statusSpan(task));
+        item.append(this.toggleBtn(task));
         item.append(this.removeBtn(task));
         item.dataset.id = task.id
         return item;
@@ -60,8 +51,7 @@ class DOM {
 
     addItem(tasks) {
         const list = document.querySelector('.main-list');
-        const lastAddedTask = tasks[tasks.length-1];
-        const elem = this.createItem(lastAddedTask);
+        const elem = this.createItem(tasks);
         return list.appendChild(elem);
     }
 
@@ -72,26 +62,27 @@ class DOM {
         return elem;
     }
 
-    complete(task){
+    toggle(task){
         const elem = this.getElementById(task.id);
         const complete = elem.children[2];
-        console.log(complete);
+        console.log(complete)
         complete.textContent = todoList.formatDate(task.completedAt);
         return elem;
     }
 
-    uncomplete(task){
-        const elem = this.getElementById(task.id);
-        console.log(elem)
-        const complete = elem.children[2];
-        complete.textContent = '-';
-        return elem;
-    } 
-
     remove(task){
-        const listElement = this.getElementById(task.id);
-        listElement.remove();
-        return listElement;
+        const elem = this.getElementById(task.id);
+        elem.remove();
+        console.log(elem);
+        return elem;
+    }
+
+    createList(tasks) {
+        if (tasks) {
+            for (let task of tasks) {
+                this.addItem(task);
+            }
+        }
     }
 
 }
